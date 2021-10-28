@@ -131,7 +131,7 @@ namespace PayPodOrderForm1.StepDefinition
         public void WhenUserClickIDPreferNotToReceiveUpdates()
         {
             Thread.Sleep(3000);
-            payPodPage.ClickByEmail2();
+            payPodPage.ClickEmail3();
         }
         
 
