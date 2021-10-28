@@ -106,10 +106,8 @@ namespace PayPodOrderForm1.PageObject
             Thread.Sleep(5000);
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
             js.ExecuteScript("window.scrollBy(0,350)", "");
-
-            //IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
             js.ExecuteScript("window.scrollBy(0,350)", "");
-            //NextButton.Click();
+            
             NextButton.Click();
         }
 
