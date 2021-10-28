@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\faweh\\source\\repos\\PayPodOrderForm1\\PayPodOrderForm1\\PayPodOrderForm1.csproj": {}
+    "C:\\Users\\faweh\\source\\repos\\PayPodTestProject\\PayPodOrderForm1\\PayPodOrderForm1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\faweh\\source\\repos\\PayPodOrderForm1\\PayPodOrderForm1\\PayPodOrderForm1.csproj": {
+    "C:\\Users\\faweh\\source\\repos\\PayPodTestProject\\PayPodOrderForm1\\PayPodOrderForm1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\faweh\\source\\repos\\PayPodOrderForm1\\PayPodOrderForm1\\PayPodOrderForm1.csproj",
+        "projectUniqueName": "C:\\Users\\faweh\\source\\repos\\PayPodTestProject\\PayPodOrderForm1\\PayPodOrderForm1.csproj",
         "projectName": "PayPodOrderForm1",
-        "projectPath": "C:\\Users\\faweh\\source\\repos\\PayPodOrderForm1\\PayPodOrderForm1\\PayPodOrderForm1.csproj",
+        "projectPath": "C:\\Users\\faweh\\source\\repos\\PayPodTestProject\\PayPodOrderForm1\\PayPodOrderForm1.csproj",
         "packagesPath": "C:\\Users\\faweh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\faweh\\source\\repos\\PayPodOrderForm1\\PayPodOrderForm1\\obj\\",
+        "outputPath": "C:\\Users\\faweh\\source\\repos\\PayPodTestProject\\PayPodOrderForm1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\faweh\\AppData\\Roaming\\NuGet\\NuGet.Config",

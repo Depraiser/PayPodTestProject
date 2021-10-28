@@ -8,7 +8,7 @@ Scenario: Pay Pod Installation
 	And User select Model
 	And I Click on New Button
 	When User select Universal Charger
-	And Click on 22KW
+	And Click on KiloWatt 
 	And I select Extended warranty
 	And I click on Next Button
 	And Enter my first Name "OLU"
@@ -19,4 +19,4 @@ Scenario: Pay Pod Installation
 	And Don't contact me by Email
 	And User click I'd prefer not to receive updates
 	When I click on Submit button
-	#Then I should be able to Submit my details for installation
+	Then I should be able to Submit my details for installation

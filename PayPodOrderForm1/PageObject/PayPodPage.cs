@@ -23,15 +23,15 @@ namespace PayPodOrderForm1.PageObject
 
         IWebElement SelectModel => driver.FindElement(By.CssSelector("#vehicleId"));
 
-        IWebElement NewButton => driver.FindElement(By.XPath("//*[@id='carMakeAndModel']/div/div/div[1]/div[3]/label[2]"));
+        IWebElement NewButton => driver.FindElement(By.XPath("//*[@class='radio radio--inline'][2]]"));
 
-        IWebElement UniversalCharger => driver.FindElement(By.XPath("#podVariant > div > div > div > div:nth-child(1) > div"));
+        IWebElement UniversalCharger => driver.FindElement(By.XPath("//*[text()='Universal Charger']"));
 
-        IWebElement Click22W => driver.FindElement(By.CssSelector("#podModel > div > div > div:nth-child(3) > div"));
+        IWebElement KiloWatt => driver.FindElement(By.XPath("//h4[text()='22kW']"));
 
-        IWebElement Extendedwarranty => driver.FindElement(By.CssSelector("#optionalExtras > div > div > div > div:nth-child(3) > div > label > h4"));
+        IWebElement Extendedwarranty => driver.FindElement(By.XPath("//*[@id='optionalExtras']/div/div/div/div[3]/div/label/h4"));
 
-        IWebElement NextButton => driver.FindElement(By.CssSelector("#next-button"));
+        IWebElement NextButton => driver.FindElement(By.XPath("//*[@id='next-button']"));
 
         IWebElement FirstName => driver.FindElement(By.CssSelector("#firstName"));
 
@@ -49,7 +49,7 @@ namespace PayPodOrderForm1.PageObject
 
         IWebElement Submit1 => driver.FindElement(By.CssSelector("#customerDetail > div > div.max-width-text.m-centre > div > div:nth-child(6) > div > button"));
 
-
+        IWebElement ReSubmit => driver.FindElement(By.XPath("//*[@id='customerDetail']/div/div[2]/div/div[6]/div/button"));
 
 
 
@@ -62,7 +62,7 @@ namespace PayPodOrderForm1.PageObject
 
         public void ClickOnSelectMake()
         {
-            Thread.Sleep(5000);
+            Thread.Sleep(3000);
             SelectElement select = new SelectElement(SelectMake);
             select.SelectByText("Land Rover");
         }
@@ -70,7 +70,6 @@ namespace PayPodOrderForm1.PageObject
 
         public void ClickOnSelectModel()
         {
-            Thread.Sleep(5000);
             SelectElement select = new SelectElement(SelectModel);
             select.SelectByText("Range Rover Sport P400e");
         }
@@ -78,22 +77,21 @@ namespace PayPodOrderForm1.PageObject
 
         public void ClickNewButton()
         {
-            Thread.Sleep(5000);
-            NewButton.Click();
+           // Thread.Sleep(5000);
+            //NewButton.Click();
         }
 
         
         public void ClickUniversalCharger()
         {
-            Thread.Sleep(5000);
             UniversalCharger.Click();
         }
 
 
 
-        public void ClickClick22W()
+        public void ClickOn22W()
         {
-            Click22W.Click();
+            KiloWatt.Click();
         }
 
 
@@ -105,9 +103,13 @@ namespace PayPodOrderForm1.PageObject
 
         public void ClickNextButton()
         {
+            Thread.Sleep(5000);
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
             js.ExecuteScript("window.scrollBy(0,350)", "");
-            NextButton.Click();
+
+            //IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("window.scrollBy(0,350)", "");
+            //NextButton.Click();
             NextButton.Click();
         }
 
@@ -129,15 +131,19 @@ namespace PayPodOrderForm1.PageObject
         }
 
 
-        public void EnterEmail1(string Email1)
+        public void EnterEmail1(string Name)
         {
-           //Email1.SendKeys(Email1);
+           Email1.SendKeys(Name);
         }
 
 
 
         public void ClickByPhone()
         {
+            Thread.Sleep(5000);
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("window.scrollBy(0,350)", "");
+            
             ByPhone.Click();
         }
 
@@ -159,6 +165,11 @@ namespace PayPodOrderForm1.PageObject
            Submit1.Click();
         }
 
+
+        public bool IsReSubmitDisplayed()
+        {
+            return ReSubmit.Displayed;
+        }
 
     }
 }
